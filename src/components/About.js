@@ -1,29 +1,28 @@
 import React, { useState } from "react";
 
 export default function About() {
-    const [dark,setDark]=useState({
-        color:'black',
-        backgroundColor:'white'
-    })
+  const [dark, setDark] = useState({
+    color: "black",
+    backgroundColor: "white",
+  });
 
-    const [btnText,setbtnText]=useState("Enable Dark Mode");
+  const [btnText, setbtnText] = useState("Enable Dark Mode");
 
-    let toggleStyle=()=>{
-        if (dark.color==="black") {
-            setDark({
-                color:'white',
-            backgroundColor:'black',
-             });
-             setbtnText("Enable Light Mode");
-        }else{
-            setDark({
-                color:'black',
-            backgroundColor:'white'
-             });
-             setbtnText("Enable Dark Mode");
-        }
-         
+  let toggleStyle = () => {
+    if (dark.color === "black") {
+      setDark({
+        color: "white",
+        backgroundColor: "black",
+      });
+      setbtnText("Enable Light Mode");
+    } else {
+      setDark({
+        color: "black",
+        backgroundColor: "white",
+      });
+      setbtnText("Enable Dark Mode");
     }
+  };
   return (
     <div style={dark}>
       <div className="container">
